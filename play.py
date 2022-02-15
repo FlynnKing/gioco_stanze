@@ -1,3 +1,3 @@
 from labirinto import Labirinto
 
-l= Labirinto('Davide')
+d = Labirinto()
