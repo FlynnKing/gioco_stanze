@@ -78,7 +78,7 @@ class Labirinto:
         self.mappa[self.x][self.y] = '!'
         self.vite -=1
         if self.vite <5 :
-            print("Attento, la salute è importante! A te ne rimane poca, esattamente ne hai ancora , ",self.vite," \n")
+            print("Attento, la salute è importante! A te ne rimane poca, esattamente ne hai ancora , ",self.vite)
             if self.vite ==0:
                 print("Peccato, hai finito le vite!")
                 return False
@@ -112,42 +112,11 @@ class Labirinto:
         else:
             print("no, il manoscritto non è qui... ci muoviamo? \n")
             return True
-
+        
+        
+        
     def esci(self):
         print("Peccato, hai perso!")
         return False
     
-    def spawn(self):
-        caso = random.randint(1,3)
-        if caso==2:
-            print("E' comparso un mostro! E' Davide che ti sfida a programmare \n")
-            print(" [-]  [-]  [-] \n")
-            print("Ci sono 3 pc, ma uno solo funziona! Quale scegli, 1 2 o 3?")
-            vincente = random.randint(1,3)
-            scelta = input("\n    ")
-            if scelta != vincente:
-                print("hai scelto il pc sbagliato, disonore!")
-                print("\n Passi ore a cercare di aggiustare il pc, pentito. Ma Bruno ha installato Kali Linux e non ci capisci un ***** \n")
-                if self.vite >4:
-                    perse = random.randint(0,1)
-                    if perse == 0:
-                        self.vite -= 2
-                        print("\n hai perso 2 vite! Te ne rimangono ",self.vite)
-                    else:
-                        self.vite -=4
-                        print("\n Ti prende troppo a male e perdi 4 vite davanti al computer.\n Te ne rimangono ",self.vite," \n")
-                elif self.vite > 2 and self.vite <=4:
-                    self.vite -=1
-                    print("Davide ti vede stanco e ti aiuta bruciando il pc. Perdi una vita per il calore, te ne rimangono ",self.vite," \n")
-                else:
-                    print("Già eri stanco, mo t'ammazzi. Hai perso.")
-                    return False
-            else:
-                self.vite -=1
-                print("\n Hai scelto il pc giusto, ma comunque ti stanchi e perdi una vita. Ne hai ancora ",self.vite," \n")
-        elif caso ==1:
-            self.vite +=2
-            print("\n hai trovato una macchinetta del caffè. Ti ristori e recuperi 2 vite. Ne hai ancora ",self.vite," \n")
-        
-                
-        
+
