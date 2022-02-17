@@ -13,6 +13,5 @@ while go_on == True:
     elif scelta == 3:
         mosse = player.mosse_valide()
         muoviti_qui = input("\n In che direzione andare? \n --->")
+        go_on = player.spawn()
         go_on = player.move(muoviti_qui,mosse)
-    
-    
